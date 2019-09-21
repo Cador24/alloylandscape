@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link type="text/css" rel="stylesheet" href="css/normalize_v2.css">
+  <link type="text/css" rel="stylesheet" href="css/grid.css">
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300italic,400" rel="stylesheet">
+  <title>Alloy Design Studio</title>
+</head>
+
+<body>
+
+
+  <section class="menuWindow thisWindow" style="visibility: hidden">
+
+    <nav class="col span-3-of-3">
+
+      <div class="navList">
+        <div class="buttonWrapper">
+          <button class="closeButton">&times;</button>
+        </div>
+
+        <ul>
+          <a href="#">
+            <li class="navItem">HOME</li>
+          </a>
+          <a href="#skills">
+            <li class="navItem">EXPERTISE</li>
+          </a>
+          <a href="#gallery">
+            <li class="navItem">DESIGN DETAILS</li>
+          </a>
+          <a href="#about">
+            <li class="navItem">ABOUT</li>
+          </a>
+        </ul>
+      </div>
+    </nav>
+
+  </section>
+
+  <header>
+    <div class="img-container">
+
+      <div class="hero-text-box">
+        <h1><b>Alloy Design</b> <span style="font-size:.75em">Studio</span></h1>
+        <h2>Landscape Architecture | Urban Planning | Sustainable Design</h2>
+        <a class="btn btn-ghost" href="#" id="menuButton">More Info</a>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="main-content">
+
+    <section class="section-skills" id="skills">
+      <div class="row">
+        <h2 class="sub-header"><b>Industry</b> Knowledge</h2>
+        <p class="marketing-copy" id="industryKnowledgeMarketing">This is some text about his skills.
+        </p>
+
+      </div>
+      <div class="row">
+        <div class="col span-1-of-3 skills-cards">
+          <div class="h3-wrapper">
+            <ion-icon class="icon ion-ios-settings" size="large"></ion-icon>
+            <h3>Skills</h3>
+          </div>
+          <ul>
+            <li>Comprehensive Site Planning</li>
+            <li>Sustainable Design</li>
+            <li>Construction Management</li>
+            <li>Sketching</li>
+          </ul>
+        </div>
+
+        <div class="col span-1-of-3 skills-cards">
+          <div class="h3-wrapper">
+            <ion-icon class="icon ion-ios-build" size="large"></ion-icon>
+            <h3>Tools</h3>
+          </div>
+          <ul>
+            <li>AutoCAD</li>
+            <li>Photoshop</li>
+            <li>Illustrator</li>
+            <li>GIS</li>
+          </ul>
+        </div>
+        <div class="col span-1-of-3 skills-cards">
+          <div class="h3-wrapper">
+            <ion-icon class="icon ion-md-paper" size="large"></ion-icon>
+            <h3>Affiliations</h3>
+          </div>
+          <ul>
+            <li>AIA</li>
+            <li>ALSA</li>
+            <li>LEED AP</li>
+            <li class="blank-li" style="height:32px"></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal-container thisWindow" style="visibility: hidden">
+
+
+      <div class="modal">
+        <div class=""></div>
+
+        <div class="modal-div">
+          <button class="closeButton foo">&times;</button>
+          <img src="./img/housing.jpg" alt="Front Yard" class="modal-content" id="housing-Image">
+          <!-- <img src="/img/topography.jpg" alt="Topography" class="modal-content" id="topography-Image"> -->
+
+          <a class="prev">&#10094;</a>
+          <a class="next">&#10095;</a>
+
+          <div class="gallery-indicators">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    </div>
+
+    <section class="section-gallery" id="gallery">
+      <div class="row">
+        <div class="projects">
+          <h2 class="sub-header"><b>Design</b> Details</h2>
+          <!-- <p class="marketing-copy">This is content about what he does, mastery, and services offered.</p> -->
+        </div>
+      </div>
+
+      <div class="gallery-wrapper">
+
+        <div class="gallery-col">
+          <div class="gallery-image image-housing"><img src="./img/housing.jpg"></div>
+          <div class="gallery-image image-ball-park"><img src="./img/ball-park.jpg"></div>
+        </div>
+
+        <div class="gallery-col">
+          <div class="gallery-image image-topography"><img src="./img/topography.jpg"></div>
+          <div class="gallery-image image-design"><img src="./img/design.jpg"></div>
+        </div>
+
+        <div class="gallery-col">
+          <div class="gallery-image image-landingpage"><img src="./img/landingpage.jpg"></div>
+          <div class="gallery-image image-university2"><img src="./img/university2.jpg"></div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section-about" id="about">
+      <div class="about row">
+        <h2 class="sub-header"><b>About</b> Chris</h2>
+        <img class="bio" src="img/bio.jpg">
+        <div>
+          <p class="marketing-copy">Alloy Design Studio creates world class landscapes, specializing in custom design
+            plans and construction solutions for public spaces.
+            <br><br> Chris is a licensed MLA architect and landscape design professional from Brooklyn, New
+            York.
+            <br>He enjoys softball, meturology, wood-work, and travel.</p>
+        </div>
+        <a class="btn btn-full" href="#">Get In Touch</a>
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+    <div class="row footer-section">
+      <nav>
+        <ul class="social-media-list">
+          <li>
+            <a href="https://www.linkedin.com/in/christramutola?trk=people-guest_profile-result-card_result-card_full-click"
+              target="_blank">
+              <ion-icon class="icon-footer ion-logo-linkedin" size="large"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <ion-icon class="icon-footer ion-logo-googleplus" size="large"></ion-icon>
+          </li>
+          <!-- <li>icon</li> -->
+        </ul>
+      </nav>
+      <p>
+        <p>Alloy Design Studio<br> Copyright &copy; 2019. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

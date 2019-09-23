@@ -37,7 +37,18 @@ body {
 
 button { 
 all: unset;
+background: none;
+color:#fff;
+border:none;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
 } 
+
+
 
 /*=====================================
 REUSABLE COMPONENTS
@@ -189,23 +200,23 @@ NAVIGATION MENU
 
 .navList {
   margin: auto;
-  width: 75%;
+  width: 100%;
   position: relative;
-  top: 50px;
+  /*! top: 50px; */
  
 }
 
 .menuWindow li {
-  margin-bottom: 25px;
-  padding: 8px;
+  margin-bottom: .25em;
+  padding: .25em;
   letter-spacing: 2.75px;
   /* border: 1px rgb(204, 204, 204) solid;
   border-radius: 10px; */
 }
 
 .buttonWrapper{
-  margin-bottom: 32px; 
-  margin-left: 128px;
+  /*! margin-bottom: 0em; */ 
+  margin-left: 3em;
 
 }
 
@@ -346,62 +357,44 @@ IMAGE GALLERY SECTION
 .section-gallery {
   background: #EFEFEF;
   padding-bottom: 80px;
-  /* max-height: 100vh; */
 }
 
-/**** Grid Container ****/
 
 .gallery-wrapper {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-evenly;
   margin:auto;
-  /* max-height: 300px; */
- 
-}
-
-.gallery-col {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: space-between; */
-  /* flex-grow: 1; */
-  max-width: 33%;
+  overflow: hidden;
   
 }
 
-.gallery-image {
-  margin: 3px;
-  cursor: pointer;
-  
-}
-
-/* .image-housing {
-  flex-grow: 1;
-} */
-
-.image-topography {
-  height:25%
-}
-
-.image-design {
-  height:75%;
-}
-
-/* last */
-.image-university2 {
-  flex-grow:3;
-}
-
-
-/*=== gallery image style ===*/
 .gallery-image {
   background-color: #000;
   font-weight: bold;
   border: 1px solid #AAA;
   border-radius: 5px;
   overflow: hidden;
+  margin-bottom: 2%;
+  cursor: pointer;
+  width: 98%;
 }
+
+/*=== gallery image style ===*/
+/* .image-housing {
+  flex-grow: 1;
+} */
+
+
+.image-design {
+  height:60.6%;
+}
+
+/* last */
+.image-university2 {
+  height: 48.7%;
+}
+
 
 .gallery-image img {
   opacity: 0.65;
@@ -417,10 +410,12 @@ IMAGE GALLERY SECTION
 
 .gallery-image img:hover {
   opacity: 1;
-  -webkit-transform: scale(1.01);
-  -ms-transform: scale(1.01);
-  transform: scale(1.01);
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.03);
 }
+
+
 
 /*======================================  
 MODAL
@@ -437,32 +432,38 @@ z-index: 2;
 left: 0;
 top: 0;
 width: 100%;
-height: 100vh;
+height: 200vh;
 overflow: auto;
 background-color: rgb(0,0,0);
 background-color: rgba(0,0,0,0.9);
 overflow-y:hidden;
-
 }
 
-.foo {
-  
-  display:block;
-}
 
 .modal-div {
   position: relative;
   margin:auto;
-  transform:translateY(5%);
-  
+  transform:translateY();
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-image-wrapper {
+  /* height: 20px; */
+  display: flex;
+  flex-direction: column;
+}
+
+#modal-closeButton {
+  width:25px;
 }
 
 .modal-content {
-  
+  margin: auto;
   /* width: auto; */
-  max-width: 100vh;
+  width: 25vw;
 }
-
 
 .prev, .next {
   cursor: pointer;
@@ -477,7 +478,6 @@ overflow-y:hidden;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  
 }
 
 .prev{
@@ -523,7 +523,6 @@ ABOUT
   border-radius: 50%;
   margin-bottom: 30px;
 }
-
 
 
 /*======================================           
@@ -572,10 +571,10 @@ RESPONSIVE
     word-spacing: 2.5px;
   }
 
-.btn:link,
-.btn:visited {
-  margin-top: 25px;
-}
+  .btn:link,
+  .btn:visited {
+    margin-top: 25px;
+  }
 
   /*Marketing Copy */
   .row .marketing-copy {
@@ -599,30 +598,38 @@ RESPONSIVE
 
 @media only screen and (max-width: 768px) {
   .gallery-wrapper {
-    display: flex;
+    display: flex; 
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     margin: auto;
+    height:auto;
+    justify-content: space-evenly;
   }
-  
+
+ 
   .gallery-col {
     display: flex;
     flex-direction: row;
-    /* flex:50%; */
-    max-width:100%;
-    justify-content: space-around;
+    width:100%; 
   }
-  
 
   .gallery-image {
+    position: relative;
     margin: 3px;
-    cursor: pointer;
-    height:auto;
+    width: 49%;
+    padding-top: 32%;
   }
   
+  figure img{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
 }
+
 
 
 @media only screen and (max-width: 480px) {
@@ -642,13 +649,23 @@ RESPONSIVE
     margin-right: 0px;
   }
 
+
+
   .gallery-col {
-    display: flex;
-    flex-direction: column;
-    /* max-width:100%; */
-    justify-content: space-around;
+    display: block;
+    width: 100%;
+
   }
 
+  .gallery-image {
+    display: block;
+    width: 98%;
+    height: 250px;
+    padding-top: 65.2%;
+    margin: 3px;
+    cursor: pointer;
+
+  }
 
 
 }

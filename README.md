@@ -10,5 +10,6 @@ Added features:
 - Modal Dialog/gallery Boxes
 - Gallery Carousel
 
-
+Original Theme:
+http://www.webdesigncourse.co/omnifood/index.php#
 

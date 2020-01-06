@@ -6,7 +6,7 @@ Created with Vanilla Javascript & CSS.
 http://marceclipse.com/alloylandscape/ 
 
 Added features:  
-- Responsive mondrian image gallery.
+- Responsive Mondrian image gallery.
 - Modal Dialog/gallery Boxes
 - Gallery Carousel
 

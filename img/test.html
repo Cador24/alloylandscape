@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fixed Aspect Ratio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+
+      width: 100%;
+      height: 100%;
+      background: #555;
+      position: relative;
+    }
+
+
+    .gallery-wrapper {
+      width: 90%;
+      margin: auto;
+
+    }
+
+    .col {
+      display: block;
+      margin: auto;
+      padding-bottom: 70px;
+    }
+
+    .gallery-col {
+      /* display: flex;
+      justify-content: space-evenly;  */
+      margin: auto;
+      margin-bottom: 5px;
+      
+      border: 2px #69a7ee solid;
+      text-align: center;
+    }
+
+
+    .gallery-image-container {
+      width: 49%;
+      height: 50%;
+      overflow: hidden;
+      display: inline-block;
+      position: relative;
+      border-radius: 10px;
+      border: 2px black solid;
+      padding-top:25%
+    }
+
+
+    img {
+      width: 100%;
+      position: absolute;
+      top:0px;
+      left:0;
+    }
+
+  .poo {
+      /* width: 185%; */
+    }
+
+.row{
+  
+}
+
+.box{
+  background: #69a7ee;
+  width: 300px;
+  height: 300px;
+  margin:auto;
+}
+
+
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <div class="col"></div>
+    <div class="col">
+      <div class="gallery-wrapper">
+
+        <div class="gallery-col">
+          
+          <figure class="gallery-image-container foo image-housing"><img src="/housing.jpg"></figure>
+          <figure class="gallery-image-container foo image-ball-park"><img src="/ball-park.jpg"></figure>
+       
+        </div>
+
+
+        <div class="gallery-col">
+          <figure class="gallery-image-container foo image-topography"><img src="/topography.jpg" class="poo"></figure>
+          <figure class="gallery-image-container foo image-design"><img src="/design.jpg"></figure>
+        </div>
+
+        <div class="gallery-col">
+          <figure class="gallery-image-container foo image-landingpage"><img src="/landingpage.jpg"></figure>
+          <figure class="gallery-image-container foo image-university2"><img src="/university2.jpg" class="poo"></figure>
+        </div>
+        <!-- Hi Jeanette!! -->
+      </div>
+
+    </div>
+    </div>
+  </main>
+
+<div class="row">
+  <div class="box"></div>
+</div>
+
+
+</body>
+
+</html>

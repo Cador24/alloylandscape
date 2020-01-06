@@ -45,7 +45,7 @@
   </section>
 
   <header>
-    <div class="img-container">
+    <div class="img-container" id="banner">
 
       <div class="hero-text-box">
         <h1><b>Alloy Design</b> <span style="font-size:.75em">Studio</span></h1>
@@ -61,8 +61,8 @@
     <section class="section-skills" id="skills">
       <div class="row">
         <h2 class="sub-header"><b>Industry</b> Knowledge</h2>
-        <p class="marketing-copy" id="industryKnowledgeMarketing">This is some text about his skills.
-        </p>
+        <!-- <p class="marketing-copy" id="industryKnowledgeMarketing">This is some text about his skills.
+        </p> -->
 
       </div>
       <div class="row">
@@ -107,30 +107,25 @@
     </section>
 
     <!-- MODAL -->
-    <div class="modal-container thisWindow" style="visibility: hidden">
+    <div class="modal thisWindow" style="visibility: hidden">
+      <div class="modal-container">
+
+        <div class="modal-image-wrapper">
+          <button class="closeButton" id="modal-closeButton">&times;</button>
+
+          <figure class="modal-image-container">
+            <img src="" alt="Front Yard" class="modal-content" id="modal-image">
+          </figure>
 
 
-      <div class="modal">
-
-        <div class="modal-div">
-
-          <div class="modal-image-wrapper">
-            <button class="closeButton" id="modal-closeButton">&times;</button>
-            <img src="./img/housing.jpg" alt="Front Yard" class="modal-content" id="housing-Image">
+          <div class="arrowButtons">
             <a class="prev">&#10094;</a>
             <a class="next">&#10095;</a>
           </div>
-
-          <div class="gallery-indicators">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-
         </div>
       </div>
     </div>
-    
+
 
     <section class="section-gallery" id="gallery">
       <div class="row">
@@ -156,7 +151,7 @@
           <figure class="gallery-image foo image-landingpage"><img src="./img/landingpage.jpg"></figure>
           <figure class="gallery-image foo image-university2"><img src="./img/university2.jpg"></figure>
         </div>
-        <!-- Hi Jeanette!! -->
+
       </div>
 
     </section>
@@ -189,10 +184,7 @@
               <ion-icon class="icon-footer ion-logo-linkedin" size="large"></ion-icon>
             </a>
           </li>
-          <li>
-            <ion-icon class="icon-footer ion-logo-googleplus" size="large"></ion-icon>
-          </li>
-          <!-- <li>icon</li> -->
+
         </ul>
       </nav>
       <p>

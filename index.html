@@ -15,14 +15,16 @@
 
 <body>
 
+  <nav class="sticky-nav row" id="hamburger-menu">
+    <a href="#"><i class="hamburger-icon ion-ios-menu" size="large"></i></a>
+  </nav>
 
   <section class="menuWindow thisWindow" style="visibility: hidden">
-
     <nav class="col span-3-of-3">
 
       <div class="navList">
         <div class="buttonWrapper">
-          <button class="closeButton">&times;</button>
+          <button class="closeButton" id="nav-close-btn">&times;</button>
         </div>
 
         <ul>
@@ -38,13 +40,17 @@
           <a href="#about">
             <li class="navItem">ABOUT</li>
           </a>
+          <a href="#contact">
+            <li class="navItem">CONTACT</li>
+          </a>
         </ul>
       </div>
     </nav>
-
   </section>
 
   <header>
+
+
     <div class="img-container" id="banner">
 
       <div class="hero-text-box">
@@ -61,14 +67,12 @@
     <section class="section-skills" id="skills">
       <div class="row">
         <h2 class="sub-header"><b>Industry</b> Knowledge</h2>
-        <!-- <p class="marketing-copy" id="industryKnowledgeMarketing">This is some text about his skills.
-        </p> -->
-
       </div>
+
       <div class="row">
         <div class="col span-1-of-3 skills-cards">
           <div class="h3-wrapper">
-            <ion-icon class="icon ion-ios-settings" size="large"></ion-icon>
+            <ion-icon class="icon ion-ios-settings"></ion-icon>
             <h3>Skills</h3>
           </div>
           <ul>
@@ -136,7 +140,6 @@
       </div>
 
       <div class="gallery-wrapper">
-
         <div class="gallery-col">
           <figure class="gallery-image foo image-housing"><img src="./img/housing.jpg"></figure>
           <figure class="gallery-image foo image-ball-park"><img src="./img/ball-park.jpg"></figure>
@@ -153,7 +156,6 @@
         </div>
 
       </div>
-
     </section>
 
 
@@ -168,7 +170,7 @@
             York.
             <br>He enjoys softball, meturology, wood-work, and travel.</p>
         </div>
-        <a class="btn btn-full" href="#">Get In Touch</a>
+        <a class="btn btn-full" id="contact" href="mailto:ctramutola@gmail.com">Get In Touch</a>
       </div>
     </section>
   </main>

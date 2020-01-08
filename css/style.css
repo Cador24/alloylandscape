@@ -1,11 +1,26 @@
 /* Table of Contents
-1 UNIVERSAL SETUP
 
+1) Resuable Components
+    H2 Headers
+    Buttons
+    Icons
+    Modal & Menu Visibility
+2) Navigation Menu
+3) Landing Page
+4) Industry Knowledge Section
+5) Image Gallery Section
+6) Modal
+7) About
+8) Footer
+9) Responsive
+    @978
+    @768
+    @480
 */
 
 
 /*=====================================
-UNIVERSAL SETUP
+1) UNIVERSAL SETUP
 =======================================*/
 
 * {
@@ -21,10 +36,8 @@ body {
   background-color: #fff;
   color: #555;
   font-family: 'Lato', 'Arial', sans-serif;
-  /* sans-serif is a css keyword */
   font-size: 20px;
   font-weight: 300;
-  /* 300 is from google's font option selection*/
   text-rendering: optimizeLegibility;
   text-align: center;
   overflow-x: hidden;
@@ -48,9 +61,8 @@ button {
   appearance: none;
 }
 
-
 /*=====================================
-REUSABLE COMPONENTS
+2) REUSABLE COMPONENTS
 =======================================*/
 
 section {
@@ -85,9 +97,8 @@ a:visited {
 }
 
 
-/*=== H2 SECTION HEADERS ===*/
+/*=== H2 HEADERS ===*/
 .sub-header {
-  /* color: #555; */
   margin-bottom: 30px;
   text-align: center;
   font-size: 170%;
@@ -119,7 +130,6 @@ a:visited {
   transition: background-color 0.25s,
     border 0.25s, color 0.25s;
 }
-
 
 .btn-full:link,
 .btn-full:visited {
@@ -159,48 +169,48 @@ a:visited {
   margin-bottom: 10px;
 }
 
-
 /* === MODAL & MENU VISIBILITY === */
 .window-toggle {
   visibility: hidden;
 }
 
-
 /*=====================================
-NAVIGATION MENU
+3) NAVIGATION MENU
 =======================================*/
+#hamburger-menu {
+  display: none;
+}
 
 .menuWindow {
   height: 100vh;
-  width: 100%;
-  background-color: #303030;
-  color: white;
+  width: 350px;
+  background-color: #EFEFEF;
   font-size: 25px;
   font-weight: 400;
   padding: 10px;
   z-index: 100;
   position: absolute;
+  right: 0;
 }
 
 .navList {
   margin: auto;
   width: 100%;
   position: relative;
-  /*! top: 50px; */
-
 }
 
 .menuWindow li {
   margin-bottom: .25em;
   padding: .25em;
   letter-spacing: 2.75px;
-  /* border: 1px rgb(204, 204, 204) solid;
-  border-radius: 10px; */
 }
 
 .buttonWrapper {
-  /*! margin-bottom: 0em; */
   margin-left: 3em;
+}
+
+#nav-close-btn{
+color: #555;
 }
 
 .closeButton {
@@ -217,8 +227,8 @@ NAVIGATION MENU
   margin-left: 170px;
 }
 
-
-.closeButton:hover {
+.closeButton:hover,
+#nav-close-btn:hover {
   color: #E67E22;
 }
 
@@ -241,7 +251,6 @@ LANDING PAGE
   background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/landingpage-2.jpg);
   background-size: cover;
   background-position: center;
-  /* background-blend-mode: saturation; */
   height: 100vh;
   position: relative;
 }
@@ -278,7 +287,7 @@ h1 {
 
 
 /*======================================
-  INDUSTRY KNOWLEDGE SECTION
+ 4) INDUSTRY KNOWLEDGE SECTION
 ======================================*/
 
 .section-skills {
@@ -322,14 +331,13 @@ h3:after {
 }
 
 /*======================================           
-IMAGE GALLERY SECTION
+ 5) IMAGE GALLERY SECTION
 ======================================*/
 
 .section-gallery {
   background: #EFEFEF;
   padding-bottom: 80px;
 }
-
 
 .gallery-wrapper {
   display: flex;
@@ -354,11 +362,10 @@ IMAGE GALLERY SECTION
   height: 60.6%;
 }
 
-/* last */
+/* last image */
 .image-university2 {
   height: 48.7%;
 }
-
 
 .gallery-image img {
   opacity: 0.65;
@@ -381,9 +388,8 @@ IMAGE GALLERY SECTION
 
 
 /*======================================  
-MODAL
+6) MODAL
 ======================================*/
-
 
 .modal {
   overflow-y: hidden;
@@ -415,14 +421,12 @@ MODAL
   background-color: rgba(128, 128, 128, 0.185);
   border-radius: 50%;
   text-align: center;
-  /* vertical-align: 10px; */
 }
 
 .modal-image-container img {
   width: 70%;
   position: relative;
 }
-
 
 .prev,
 .next {
@@ -447,7 +451,6 @@ MODAL
   border-radius: 3px 0 0 3px;
 }
 
-
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.938);
@@ -466,7 +469,7 @@ MODAL
 }
 
 /*======================================         
-ABOUT
+7) ABOUT
 ======================================*/
 
 .bio {
@@ -477,9 +480,8 @@ ABOUT
 }
 
 /*======================================
-FOOTER
+8) FOOTER
 ======================================*/
-
 
 footer {
   background: #333;
@@ -499,7 +501,8 @@ footer p {
   clear: both;
   padding: 10px 0;
   line-height: 1.5em;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
+  font-size: 80%;
 }
 
 .icon-footer {
@@ -507,7 +510,7 @@ footer p {
 }
 
 /*======================================         
-RESPONSIVE
+9) RESPONSIVE
 ======================================*/
 @media only screen and (max-width: 978px) {
 
@@ -554,11 +557,10 @@ RESPONSIVE
     top: 5%;
     z-index: 3;
   }
-
 }
 
 @media only screen and (max-width: 768px) {
-
+  
   .gallery-wrapper {
     display: flex;
     flex-direction: column;
@@ -595,12 +597,38 @@ RESPONSIVE
 }
 
 @media only screen and (max-width: 480px) {
+  .menuWindow {
+    width: 100%;
+  }
+
+  nav.row{
+    max-width: 100%;
+  }
+
   .img-container{
     height: calc(var(--vh, 1vh) * 100);
   } 
 
   .hero-text-box h1 {
     line-height: 1.1;
+  }
+
+  /* Hamburger */
+  #hamburger-menu {
+    display: block;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    background-color:rgba(230, 125, 34, 0.98);
+    /*#CF6D17; #E67E22;*/
+    text-align: right;
+    box-shadow: 0 2px 2px rgba(102, 102, 102, 0.438);
+  }
+
+  .ion-ios-menu {
+    color: #EFEFEF;
+    font-size: 200%;
+    padding-right: 5%;
   }
 
   /* Menu Button */

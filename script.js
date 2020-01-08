@@ -3,11 +3,10 @@ const moreInfoButton = document.querySelector("#menuButton");
 const menuWindowEl = document.querySelector(".menuWindow");
 const menuCloseButton = document.querySelectorAll(".closeButton");
 const navItemEl = document.querySelectorAll(".navItem");
-
 const thisWindowEl = document.querySelectorAll(".thisWindow");
-
 const galleryImageEl = document.querySelectorAll(".gallery-image");
-
+const hamburgerNav = document.getElementById("hamburger-menu");
+const hamburgerIcon = document.querySelector(".hamburger-icon");
 
 
 // Fixes VH Jitter
@@ -15,18 +14,35 @@ let vh = window.innerHeight * 0.01;
 document.getElementById("banner").style.setProperty('vh', vh + "px");
 
 
+//Hamburger menu 
+
+//enable sticky
+/*
+hamburgerNav.waypoint(function(direction) {
+  if (direction == "down") {
+      $('nav').addClass('.sticky-nav');
+  } else {
+      $('nav').removeClass('.sticky-nav');
+  }
+}, {
+offset: '60px;' //what is this?
+});
+*/
+
+
+// Navigation & MORE INFO Button
+[hamburgerIcon,moreInfoButton].forEach(item => { 
+item.addEventListener('click', () => {
+  menuWindowEl.style.visibility = "visible";
+  bodyEl.style.overflowY = "hidden";
+  })
+});
+
+
 // Restores Scrolls
 function enableScroll() {
   bodyEl.style.overflowY = "visible";
 }
-
-
-
-// Navigation & MORE INFO BUTTON
-moreInfoButton.addEventListener('click', function () {
-  menuWindowEl.style.visibility = "visible";
-  bodyEl.style.overflowY = "hidden";
-});
 
 
 let closeMenuWindow = menuCloseButton[0].addEventListener('click', function () {

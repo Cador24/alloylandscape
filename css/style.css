@@ -358,12 +358,12 @@ h3:after {
   width: 98%;
 }
 
-.image-design {
+#image-design {
   height: 60.6%;
 }
 
 /* last image */
-.image-university2 {
+#image-university2 {
   height: 48.7%;
 }
 
@@ -428,31 +428,32 @@ h3:after {
   position: relative;
 }
 
-.prev,
-.next {
+.arrow-buttons{
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
   padding: 16px;
   margin-top: -22px;
+  background-color: rgba(128, 128, 128, 0.185);
   color: white;
   font-size: 28px;
   border-radius: 0 3px 3px 0;
   user-select: none;
+
 }
 
-.prev {
+#prev {
   left: 15px;
 }
 
-.next {
+#next {
   right: 15px;
   border-radius: 3px 0 0 3px;
 }
 
-.prev:hover,
-.next:hover {
+#prev:hover,
+#next:hover {
   background-color: rgba(0, 0, 0, 0.938);
   transition: 0.5s ease;
 }
@@ -591,7 +592,7 @@ footer p {
     left: 0;
   }
 
-  .arrowButtons {
+  #arrow-buttons-container {
     display: none;
   }
 }

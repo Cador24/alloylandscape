@@ -49,10 +49,7 @@
   </section>
 
   <header>
-
-
     <div class="img-container" id="banner">
-
       <div class="hero-text-box">
         <h1><b>Alloy Design</b> <span style="font-size:.75em">Studio</span></h1>
         <h2>Landscape Architecture | Urban Planning | Sustainable Design</h2>
@@ -118,13 +115,13 @@
           <button class="closeButton" id="modal-closeButton">&times;</button>
 
           <figure class="modal-image-container">
-            <img src="" alt="Front Yard" class="modal-content" id="modal-image">
+            <img src="" alt="" class="modal-content" id="modal-image">
           </figure>
 
 
-          <div class="arrowButtons">
-            <a class="prev">&#10094;</a>
-            <a class="next">&#10095;</a>
+          <div id="arrow-buttons-container">
+            <a class="arrow-buttons" id="prev" onclick="subtracter()">&#10094;</a>
+            <a class="arrow-buttons" id="next" onclick="adder()">&#10095;</a>
           </div>
         </div>
       </div>
@@ -135,24 +132,23 @@
       <div class="row">
         <div class="projects">
           <h2 class="sub-header"><b>Design</b> Details</h2>
-          <!-- <p class="marketing-copy">This is content about what he does, mastery, and services offered.</p> -->
         </div>
       </div>
 
       <div class="gallery-wrapper">
         <div class="gallery-col">
-          <figure class="gallery-image foo image-housing"><img src="./img/housing.jpg"></figure>
-          <figure class="gallery-image foo image-ball-park"><img src="./img/ball-park.jpg"></figure>
+          <figure class="gallery-image" id="image-housing"><img src="./img/housing.jpg"></figure>
+          <figure class="gallery-image" id="image-ball-park"><img src="./img/ball-park.jpg"></figure>
         </div>
 
         <div class="gallery-col">
-          <figure class="gallery-image foo image-topography"><img src="./img/topography.jpg"></figure>
-          <figure class="gallery-image foo image-design"><img src="./img/design.jpg"></figure>
+          <figure class="gallery-image" id="image-topography"><img src="./img/topography.jpg"></figure>
+          <figure class="gallery-image" id="image-design"><img src="./img/design.jpg"></figure>
         </div>
 
         <div class="gallery-col">
-          <figure class="gallery-image foo image-landingpage"><img src="./img/landingpage.jpg"></figure>
-          <figure class="gallery-image foo image-university2"><img src="./img/university2.jpg"></figure>
+          <figure class="gallery-image" id="image-landingpage"><img src="./img/landingpage.jpg"></figure>
+          <figure class="gallery-image" id="image-university2"><img src="./img/university2.jpg"></figure>
         </div>
 
       </div>

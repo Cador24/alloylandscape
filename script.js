@@ -7,14 +7,14 @@ const thisWindowEl = document.querySelectorAll(".thisWindow");
 const galleryImageEl = document.querySelectorAll(".gallery-image");
 const hamburgerNav = document.getElementById("hamburger-menu");
 const hamburgerIcon = document.querySelector(".hamburger-icon");
-
+const modalImageSrc = document.getElementById("modal-image");
 
 // Fixes VH Jitter
 let vh = window.innerHeight * 0.01;
-document.getElementById("banner").style.setProperty('vh', vh + "px");
+document.getElementById("banner").style.setProperty('vh', vh + "px"); //review required
 
 
-//Hamburger menu 
+//Hamburger menu
 
 //enable sticky
 /*
@@ -31,12 +31,14 @@ offset: '60px;' //what is this?
 
 
 // Navigation & MORE INFO Button
-[hamburgerIcon,moreInfoButton].forEach(item => { 
-item.addEventListener('click', () => {
+let navLoop = [hamburgerIcon, moreInfoButton];
+
+for(let item in navLoop) { 
+  navLoop[item].addEventListener('click', function() {
   menuWindowEl.style.visibility = "visible";
   bodyEl.style.overflowY = "hidden";
   })
-});
+};
 
 
 // Restores Scrolls
@@ -57,9 +59,7 @@ for (var i = 0; i < navItemEl.length; i++) {
   });
 }
 
-
 // Nav & Modal Togglers //
-
 let closeMenuWindow2 = menuCloseButton[1].addEventListener('click', function () {
   thisWindowEl[1].style.visibility = "hidden";
   enableScroll();
@@ -75,22 +75,8 @@ for (var i = 0; i < galleryImageEl.length; i++) {
 //Gallery Image & Src Selector//
 
 let getImageSrc = function(getSrc) {
-  const foo = document.getElementById("modal-image");
-  foo.src = getSrc;
+    modalImageSrc.src = getSrc;
 }
-
-
-// function clickList(list) {
-//   for (let i = 0; i < list.length; i++) {
-//     list[i].addEventListener("click", function(){
-//         let x = list[i].firstChild.src
-//         console.log(event.target.src);
-//         return insertModalImage(x);
-//     });
-//   }
-// }
-// clickList(galleryImageEl);
-
 
 function clickList(list) {
   for (let i = 0; i < list.length; i++) {
@@ -102,4 +88,57 @@ function clickList(list) {
 }
 clickList(galleryImageEl);
 
-//Modal Slideshow//
+
+/*
+
+Start States??***= if(indxOf(currentIndex))
+
+Converet ModalImage.src = gallerysourcelist[index]
+
+. get image list number
+. create toArray[] with gallery-image src.
+. loop array #s
+. current image = current array #
+
+Convert event "on Swipe" @ media 768
+
+
+/*=========================
+ Modal Slideshow
+=========================*/
+
+//Pass Gallery's Image src to Array.
+let gallerySourceList = [];
+let counter = 0;
+
+for(let i = 0; i < galleryImageEl.length; i++) {
+  gallerySourceList.push(galleryImageEl[i].firstElementChild.src);
+  }
+
+//Array Index Counter
+
+
+function adder(){ 
+  counter++;
+  if (counter > 5 ){
+    counter = 0;
+  }
+  console.log(counter);
+  modalImageSrc.src = gallerySourceList[counter];
+} 
+
+function subtracter(){ 
+  counter--;
+  if (counter < 0 ) {
+    counter = 5;
+  }
+  console.log(counter);
+  modalImageSrc.src = gallerySourceList[counter];
+} 
+
+
+
+function baguulSchool2(change) {
+modalImageSrc.src = gallerySourceList[change];
+}
+baguulSchool2(counter)

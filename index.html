@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link type="text/css" rel="stylesheet" href="css/normalize_v2.css">
+  <link type="text/css" rel="stylesheet" href="css/normalize.css">
   <link type="text/css" rel="stylesheet" href="css/grid.css">
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
@@ -15,7 +15,7 @@
 
 <body>
 
-  <nav class="sticky-nav row" id="hamburger-menu">
+  <nav class="sticky-nav" id="hamburger-menu">
     <a href="#"><i class="hamburger-icon ion-ios-menu" size="large"></i></a>
   </nav>
 
@@ -40,7 +40,7 @@
           <a href="#about">
             <li class="navItem">ABOUT</li>
           </a>
-          <a href="#contact">
+          <a href="mailto:ctramutola@gmail.com">
             <li class="navItem">CONTACT</li>
           </a>
         </ul>
@@ -115,18 +115,17 @@
           <button class="closeButton" id="modal-closeButton">&times;</button>
 
           <figure class="modal-image-container">
-            <img src="" alt="" class="modal-content" id="modal-image">
+            <img src="" alt="" class="" id="modal-image">
           </figure>
 
 
           <div id="arrow-buttons-container">
-            <a class="arrow-buttons" id="prev" onclick="subtracter()">&#10094;</a>
-            <a class="arrow-buttons" id="next" onclick="adder()">&#10095;</a>
+            <a class="arrow-buttons" id="prev" onclick="prev()">&#10094;</a>
+            <a class="arrow-buttons" id="next" onclick="next()">&#10095;</a>
           </div>
         </div>
       </div>
     </div>
-
 
     <section class="section-gallery" id="gallery">
       <div class="row">
@@ -185,7 +184,6 @@
 
         </ul>
       </nav>
-      <p>
         <p>Alloy Design Studio<br> Copyright &copy; 2019. All rights reserved.</p>
     </div>
   </footer>

@@ -3,31 +3,16 @@ const moreInfoButton = document.querySelector("#menuButton");
 const menuWindowEl = document.querySelector(".menuWindow");
 const menuCloseButton = document.querySelectorAll(".closeButton");
 const navItemEl = document.querySelectorAll(".navItem");
+const skillsSection = document.getElementById("skills");
 const thisWindowEl = document.querySelectorAll(".thisWindow");
 const galleryImageEl = document.querySelectorAll(".gallery-image");
 const hamburgerNav = document.getElementById("hamburger-menu");
 const hamburgerIcon = document.querySelector(".hamburger-icon");
-const modalImageSrc = document.getElementById("modal-image");
+const modalImage = document.getElementById("modal-image");
 
 // Fixes VH Jitter
 let vh = window.innerHeight * 0.01;
-document.getElementById("banner").style.setProperty('vh', vh + "px"); //review required
-
-
-//Hamburger menu
-
-//enable sticky
-/*
-hamburgerNav.waypoint(function(direction) {
-  if (direction == "down") {
-      $('nav').addClass('.sticky-nav');
-  } else {
-      $('nav').removeClass('.sticky-nav');
-  }
-}, {
-offset: '60px;' //what is this?
-});
-*/
+document.getElementById("banner").style.setProperty('--vh', vh + "px"); //review required
 
 
 // Navigation & MORE INFO Button
@@ -40,19 +25,17 @@ for(let item in navLoop) {
   })
 };
 
-
 // Restores Scrolls
 function enableScroll() {
   bodyEl.style.overflowY = "visible";
 }
-
 
 let closeMenuWindow = menuCloseButton[0].addEventListener('click', function () {
   menuWindowEl.style.visibility = "hidden";
   enableScroll();
 });
 
-for (var i = 0; i < navItemEl.length; i++) {
+for (var i = 0; i < navItemEl.length -1; i++) {
   navItemEl[i].addEventListener('click', function () {
     menuWindowEl.style.visibility = "hidden";
     enableScroll();
@@ -72,73 +55,54 @@ for (var i = 0; i < galleryImageEl.length; i++) {
   });
 }
 
-//Gallery Image & Src Selector//
-
-let getImageSrc = function(getSrc) {
-    modalImageSrc.src = getSrc;
-}
-
-function clickList(list) {
-  for (let i = 0; i < list.length; i++) {
-    list[i].addEventListener("click", function(){
-        let x = event.target.src
-        return getImageSrc(x);
-    });
-  }
-}
-clickList(galleryImageEl);
-
-
-/*
-
-Start States??***= if(indxOf(currentIndex))
-
-Converet ModalImage.src = gallerysourcelist[index]
-
-. get image list number
-. create toArray[] with gallery-image src.
-. loop array #s
-. current image = current array #
-
-Convert event "on Swipe" @ media 768
-
 
 /*=========================
  Modal Slideshow
 =========================*/
 
+//Set Gallery Image for arrow buttons
+
+
 //Pass Gallery's Image src to Array.
 let gallerySourceList = [];
-let counter = 0;
+let counter
+
+//Initail Gallery Image & Src Selector//
+let getImageSrc = function(getSrc) {
+    modalImage.src = getSrc;
+}
+
+function clickList(list) {
+  for (let i = 0; i < list.length; i++) {
+    list[i].addEventListener("click", function() {
+        let x = event.target.src
+        counter = gallerySourceList.indexOf(x);
+        return getImageSrc(x);
+    });
+  }
+}
 
 for(let i = 0; i < galleryImageEl.length; i++) {
   gallerySourceList.push(galleryImageEl[i].firstElementChild.src);
   }
 
-//Array Index Counter
+clickList(galleryImageEl);
 
-
-function adder(){ 
+//Arrow Click Counter(Array Index Counter)
+function next() { 
   counter++;
-  if (counter > 5 ){
+  if (counter > 5) {
     counter = 0;
   }
-  console.log(counter);
-  modalImageSrc.src = gallerySourceList[counter];
+  modalImage.src = gallerySourceList[counter];
 } 
 
-function subtracter(){ 
+function prev(){ 
   counter--;
-  if (counter < 0 ) {
+  if (counter < 0) {
     counter = 5;
   }
-  console.log(counter);
-  modalImageSrc.src = gallerySourceList[counter];
+  modalImage.src = gallerySourceList[counter];
 } 
 
 
-
-function baguulSchool2(change) {
-modalImageSrc.src = gallerySourceList[change];
-}
-baguulSchool2(counter)
